@@ -7,3 +7,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+@layer utilities{
+  .textshadow {
+    text-shadow: -5px 5px 2px #3b82f680;
+  }
+}

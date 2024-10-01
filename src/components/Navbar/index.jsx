@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
-import { InstagramLogo, GithubLogo } from "@phosphor-icons/react"
+import { InstagramLogo, GithubLogo, HouseLine, Code, ReadCvLogo, GameController } from "@phosphor-icons/react"
 
 const Navbar = () => {
 
@@ -32,7 +32,7 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <header className="p-4 bg-primary">
+        <header className="p-4 bg-gradient-to-r from-primary to-gray">
             <div className="flex items-center justify-between relative">
 
                 <Link href={"/"} className="flex items-center text-white font-bold text-2xl px-10">Vetooz</Link>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     <span className="w-10 h-[2px] my-2 block bg-white "></span>
                 </button>
                 <div ref={sidebarRef}
-                    className={`fixed top-0 right-0 h-full w-64 bg-primary text-white transition-transform duration-300 transform ${isOpen ? '-translate-x-0 shadow-blue-500/50 shadow-xl' : 'translate-x-full'}`}>
+                    className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-primary from-60% to-gray text-white transition-transform duration-300 transform ${isOpen ? '-translate-x-0 shadow-blue-500/50 shadow-xl' : 'translate-x-full'}`}>
 
                     <div className="p-4">
                         <button onClick={toggleSidebar} className="block md:hidden text-white">
@@ -51,22 +51,37 @@ const Navbar = () => {
                         </button>
                         <div className="flex flex-col py-5 ">
 
-                            <Link href={"/"} className="py-5 rounded-lg active:bg-white active:text-primary active:shadow-2xl active:shadow-blue-500/50">Home</Link>
-                            <Link href={"/"} className="py-5 rounded-lg active:bg-white active:text-primary active:shadow-2xl active:shadow-blue-500/50">Project</Link>
-                            <Link href={"/"} className="py-5 rounded-lg active:bg-white active:text-primary active:shadow-2xl active:shadow-blue-500/50">About</Link>
-                            <Link href={"/"} className="py-5 rounded-lg active:bg-white active:text-primary active:shadow-2xl active:shadow-blue-500/50">Hobby</Link>
+                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                                <HouseLine size={20} />
+                                Home
+                            </Link>
+                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                                <Code size={20} />
+                                Project
+                            </Link>
+                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                                <ReadCvLogo size={20} />
+                                About
+                            </Link>
+                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                                <GameController size={20} />
+                                Hobby
+                            </Link>
                         </div>
 
 
                     </div>
+                    <div className="absolute inset-x-0 bottom-16 px-2 ">
+                        <span className="w-full h-[2px] block bg-white mb-2 rounded-full"></span>
+                    </div>
                     <div className="absolute inset-x-0 bottom-2 px-2">
-                        <div className="flex">
-                            <InstagramLogo size={35} />
-                            <Link href={"/"}>Instagram</Link>
+                        <div className="flex flex-row-reverse items-center">
+                            <InstagramLogo size={25} />
+                            <Link href={"/"} className="textshadow">Instagram</Link>
                         </div>
-                        <div className="flex">
-                            <GithubLogo size={35} />
-                            <Link href={"/"}>Github</Link>
+                        <div className="flex items-center">
+                            <GithubLogo size={25} />
+                            <Link href={"/"} className="textshadow">Github</Link>
                         </div>
                     </div>
                 </div>
