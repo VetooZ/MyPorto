@@ -33,17 +33,11 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <header className="p-4 bg-gradient-to-r from-primary to-gray">
+        <header className="p-4 bg-gradient-to-r from-primary to-gray sticky top-0 z-10">
             <div className="flex items-center justify-between relative">
 
                 <Link href={"/"} className="flex items-center text-white font-bold text-2xl px-10">
-                    <Typewriter
-                        options={{
-                            strings: ['Halloo', `Saya Veto`],
-                            autoStart: true,
-                            loop: true,
-                        }}
-                    />
+                    Vetooz
                 </Link>
                 <button onClick={toggleSidebar} className="block md:hidden text-white">
                     <span className="w-10 h-[2px] my-2 block bg-white"></span>
@@ -51,7 +45,7 @@ const Navbar = () => {
                     <span className="w-10 h-[2px] my-2 block bg-white "></span>
                 </button>
                 <div ref={sidebarRef}
-                    className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-primary from-60% to-gray text-white transition-transform duration-300 transform ${isOpen ? '-translate-x-0 shadow-blue shadow-xl ' : 'translate-x-full'}`}>
+                    className={`fixed top-0 right-0 h-full w-64 bg-gradient-to-b from-primary from-60% to-gray text-white transition-transform duration-300 transform ${isOpen ? '-translate-x-0 shadow-blue shadow-xl z-10' : 'translate-x-full'}`}>
 
                     <div className="p-4">
                         <button onClick={toggleSidebar} className="block md:hidden text-white">
@@ -64,15 +58,15 @@ const Navbar = () => {
                                 <HouseLine size={20} />
                                 Home
                             </Link>
-                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                            <Link href={"/projects"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
                                 <Code size={20} />
-                                Project
+                                Projects
                             </Link>
-                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                            <Link href={"/about"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
                                 <ReadCvLogo size={20} />
                                 About
                             </Link>
-                            <Link href={"/"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
+                            <Link href={"/hobby"} className="flex items-center gap-2 px-2 py-5 my-2 rounded-lg shadow-inner-gray active:bg-white active:text-primary active:shadow-inner-lg active:font-semibold active:textshadow">
                                 <GameController size={20} />
                                 Hobby
                             </Link>
@@ -97,9 +91,9 @@ const Navbar = () => {
                 <div className="hidden md:block">
                     <div className="flex items-center px-10 gap-10">
                         <Link href={"/"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-out duration-500">Home</Link>
-                        <Link href={"/"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">Project</Link>
-                        <Link href={"/"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">About</Link>
-                        <Link href={"/"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">Hobby</Link>
+                        <Link href={"/projects"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">Project</Link>
+                        <Link href={"/about"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">About</Link>
+                        <Link href={"/hobby"} className="text-white px-4 py-1 rounded-full hover:bg-white hover:text-primary hover:shadow-xl hover:shadow-blue transition ease-in-out duration-500">Hobby</Link>
                     </div>
 
                 </div>
