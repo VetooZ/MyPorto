@@ -2,7 +2,7 @@
 import Typewriter from "typewriter-effect";
 import { BackgroundBeamsWithCollision } from "@/components/Utilities/Background";
 import Link from "next/link";
-import { InstagramLogo, GithubLogo } from "@phosphor-icons/react";
+import { InstagramLogo, GithubLogo, DiscordLogo } from "@phosphor-icons/react";
 
 
 const HeroSection = () => {
@@ -34,11 +34,11 @@ const HeroSection = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                             </svg>
                             <h1 className="text-white font-bold text-xl">
-                                Social Media
+                                Contact
                             </h1>
 
                         </div>
-                            <span className="w-40 h-[2px] my-2 block bg-white "></span>
+                            <span className="w-28 h-[2px] my-2 block bg-white "></span>
                         <div className="flex justify-center gap-3 mt-3">
 
                             <Link href={"https://instagram.com/vetozt__"} className="flex justify-center items-center bg-white text-primary rounded-xl p-2 hover:bg-gray hover:text-white hover:ease-in-out hover:duration-300 hover:shadow-lg hover:shadow-blue active:bg-gray active:text-white active:ease-in-out active:duration-300 active:shadow-lg active:shadow-blue">
@@ -48,6 +48,10 @@ const HeroSection = () => {
                             <Link href={"https://github.com/VetooZ"} className="flex justify-center items-center bg-white text-primary rounded-xl p-2 hover:bg-gray hover:text-white hover:ease-in-out hover:duration-300 hover:shadow-lg hover:shadow-blue active:bg-gray active:text-white active:ease-in-out active:duration-300 active:shadow-lg active:shadow-blue">
                                 <GithubLogo size={25} />
                                 Github
+                            </Link>
+                            <Link href={"https://discord.com/users/659866807624007700"} className="flex justify-center items-center bg-white text-primary rounded-xl p-2 hover:bg-gray hover:text-white hover:ease-in-out hover:duration-300 hover:shadow-lg hover:shadow-blue active:bg-gray active:text-white active:ease-in-out active:duration-300 active:shadow-lg active:shadow-blue">
+                                <DiscordLogo size={25} />
+                                Discord
                             </Link>
                         </div>
                     </div>
