@@ -15,9 +15,9 @@ module.exports = {
       colors: {
         background: "var(--background)", // Menggunakan CSS custom property
         foreground: "var(--foreground)",
-        primary: "#030712", // Menambah warna kustom tanpa menghapus warna default
+        primary: "#030712", 
         white: "#fafafa",
-        blue: "#3b82f680 ",
+        blue: "#3b82f680",
         gray:"#0f172a",
         'neon-green': '#39ff14', // Menambah warna kustom tanpa menghapus warna default
       },

@@ -80,11 +80,11 @@ const Navbar = () => {
                     <div className="absolute inset-x-0 bottom-2 px-2">
                         <div className="flex flex-row-reverse items-center">
                             <InstagramLogo size={25} />
-                            <Link href={"/"} className="textshadow">Instagram</Link>
+                            <Link href={"https://www.instagram.com/vetozt__"} className="textshadow">Instagram</Link>
                         </div>
                         <div className="flex items-center">
                             <GithubLogo size={25} />
-                            <Link href={"/"} className="textshadow">Github</Link>
+                            <Link href={"https://github.com/VetooZ"} className="textshadow">Github</Link>
                         </div>
                     </div>
                 </div>
