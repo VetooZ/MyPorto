@@ -6,7 +6,6 @@ const Page = () => {
     return (
         <div className="fixed inset-0">
 
-            <BackgroundBeamsWithCollision>
 
                 <div className="min-h-screen max-w-xl mx-auto flex justify-center items-center">
                     <div className="flex flex-col justify-center items-center gap-4">
@@ -19,7 +18,6 @@ const Page = () => {
                         <Link href="/" className="text-primary bg-white text-xl text-semibold px-3 py-1 rounded-full active:shadow-xl active:shadow-blue hover:shadow-xl hover:shadow-blue">Back</Link>
                     </div>
                 </div>
-            </BackgroundBeamsWithCollision>
         </div>
     )
 }
