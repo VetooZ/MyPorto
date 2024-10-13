@@ -1,11 +1,7 @@
-import { BackgroundBeamsWithCollision } from "@/components/Utilities/Background"
 
 const Projects = () => {
     return (
-        <div>
-            <BackgroundBeamsWithCollision>
-                
-            </BackgroundBeamsWithCollision>
+        <div className="bg-white dark:bg-primary inset-0 h-screen">
         </div>
     )
 }

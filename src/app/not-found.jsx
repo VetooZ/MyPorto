@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { BackgroundBeamsWithCollision } from "@/components/Utilities/Background"
 
 const Page = () => {
     return (
